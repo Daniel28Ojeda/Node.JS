@@ -1,0 +1,81 @@
+- Download:
+nodejs.org
+
+----------------------------------------------------------
+
+- Verificar versão Node:
+dentro do cmd ou PowerShell:
+node -v
+
+----------------------------------------------------------
+
+- Entrar com código JS no terminal para testes:
+dentro do terminal digitar
+node
+testar qualquer código js:
+for(let i=1; i<=5; i++){console.log('Teste ok')};
+
+----------------------------------------------------------
+
+- Sair do interpretador JS dentro do terminal
+Control+C
+
+----------------------------------------------------------
+
+- Executar um arquivo Node:
+terminal na pasta do arquivo JS e executar:
+node nome_do_app.js
+
+----------------------------------------------------------
+
+- NPM:
+Ciação atomática:
+entrar na pasta desejada com o terminal e dar o comando:
+npm init
+Preencher os dados pedidos e no final se´ra criado um arquivo package.json
+
+----------------------------------------------------------
+
+- Executar script criado dentro do package.JSON
+criar o script dentro de scripts com nome "exec" por exemplo
+comando no terminal
+npm run exec	
+
+----------------------------------------------------------
+
+- Instação TypeScript
+criar arquivo com extensão .ts
+npm install typescript --D
+--D informa que esse pacote será instalado apenas para desenvolvimento e não em produção
+
+----------------------------------------------------------
+
+- Execução Typescript
+Transpilar o arquivo .ts para .js e depois executar
+tsc é o transpilador default do node, ele gera um js como saída
+npx tsc app.ts --target ES6
+node app.js
+
+Transpilador diferente e mais utli
+npm init
+npm install tyoescript -D
+npm install @types/node -D
+npm install ts-node-dev -D
+
+Execução:
+Não gera arquivo .js
+npx ts-node-dev app.ts
+Dentro do package.jason entrar em scripts e criar:
+"dev:app":"ts-node-dev --respawn app.ts"
+executar o comando no terminal:
+npm run dev:app
+
+Resultado:
+Toda vez q salvar o arquivo ele já executará o script mudando o arquivo final, igual a um hot reload
+
+----------------------------------------------------------
+
+- Importar bibliotecas em TypeScript
+Para poder usar bibliotecas em TypeScript, é necessário instalar o pacote @types/node na RAIZ do projeto ou pasta anterior, só na pasta não funciona
+npm install @types/node
+
